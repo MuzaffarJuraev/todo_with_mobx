@@ -13,8 +13,8 @@ class Todos {
     this.todos = todos;
   }
 
-  setTodo(todo) {
-    this.todos.push(todo);
+  setTodo(title) {
+    this.todos.push({ id: new Date().getTime(), title, completed: false });
   }
 
   async getTodos() {
